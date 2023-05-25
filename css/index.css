@@ -1,0 +1,339 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Tohoma';
+}
+@font-face {
+	font-family: 'Tahoma';
+	src: url('./Tahoma.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+body {
+    overflow-x: hidden;
+}
+
+.box {
+    width: 100%;
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.box::-webkit-scrollbar {
+    display: none;
+}
+
+.box .back-to-left {
+    border: 2px solid #000;
+    position: sticky;
+    top: 0px;
+    left: 5px;
+    height: 20px;
+    margin-left: -160px;
+    border-radius: 100px;
+    padding: 1px 10px;
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;   
+    background-color: #fff;
+}
+
+.box .back-to-left:hover {
+    background-color: #FDE776;
+}
+
+.box .back-to-left div {
+    width: 110px;
+}
+
+.box .back-to-left img {
+    width: 20px;
+    margin-bottom: -2px;
+}
+
+.box,
+.img-1 {
+    width: 200vw;
+}
+
+.box {
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.box>img {
+    width: 200vw;
+    height: 100vh;
+}
+
+.img-1>img {
+    width: 40vw;
+    height: 100vh;
+    // cursor: pointer;
+}
+
+.img-1:hover .dialog {
+    display: block;
+}
+
+.dialog {
+    position: absolute;
+    background: #fff;
+    width: 340px;
+    display: none;
+    border: 1px solid #000;
+    border-radius: 5px;
+    height: 265px;
+    padding: 15px 10px;
+    top: 50%;
+    font-size: 24px;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+
+.dialog img {
+    width: 330px;
+}
+
+.box2 {
+    background-color: #F9F5D9;
+    /* height: 900px; */
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: none;
+    padding: 1px;
+}
+
+ .back-to-top {
+    border: 2px solid #000;
+    position: fixed;
+    right: 30px;
+    bottom: 10px;
+    height: 20px;
+    width: 110px;
+    border-radius: 100px;
+    padding: 1px 10px;
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;   
+    background-color: #fff;
+}
+
+ .back-to-top:hover {
+    background-color: #FDE776;
+}
+
+.top_title {
+    width: 410px;
+    height: 210px;
+    top: 10px;
+    position: absolute;
+    text-align: center;
+    background: url('../images/7_painting.png') no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    font-size: 21px;
+}
+
+.content {
+    border: 3px solid #418348;
+    width: 70%;
+    margin: 200px auto 0;
+    color: #418348;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+.title-2 {
+    border-bottom: 3px solid #418348;
+    padding: 15px;
+    text-align: center;
+}
+
+.des-2 {
+    padding: 15px;
+}
+
+.box3 {
+    display: none;
+}
+
+.hei {
+    height: 60px;
+    font-size: 30px;
+    background-color: #000;
+    display: flex;
+    color: #fff;
+    align-items: center;
+    line-height: 60px;
+    width: 100%;
+    padding: 0 50px;
+    top: 0px;
+    position:sticky;
+}
+.hei>div{
+    padding: 0 10px;
+}
+.hei>div:nth-of-type(3){
+    text-decoration: underline;
+}
+.hei>div:last-child{
+    text-decoration: underline;
+    margin-left: 60px;
+}
+.shipin{
+    display: flex;
+}
+.center{
+    text-align: center;
+}
+.shipin ._left{
+    font-size: 30px;
+    width: 40%;
+    padding-left: 100px;
+    padding-top: 100px;
+}
+.shipin ._right{
+    width: 60%;
+}
+.shipin ._right video{
+    width: 100%;
+    min-height: 600px;
+}
+.big{
+    font-size: 45px;
+    margin-top: 30px;
+    line-height: 1.2;
+    // font-weight: bold;
+    margin-left: -100px;
+
+}
+.big-fiexd {
+    position:relative;
+    bottom: 0px;
+    left: 0px;
+}
+.img-list img{
+    width: 100%;
+}
+.text-right{
+    width: 50%;
+    height: 200px;
+    overflow: auto;
+    float: right;
+    margin: 50px 0;
+    margin-right: 100px;
+    font-size: 30px;
+}
+.text-right::-webkit-scrollbar {
+    display: none;
+}
+.text-left{
+    font-size: 45px;
+    margin-top: 200px;
+}
+.text-img{
+    display: flex;
+}
+.text-img-left{
+    width: 40%;
+    margin: 50px 50px 0 100px;
+    font-size: 30px;
+    height: 200px;
+    overflow: auto;
+}
+.text-img-left::-webkit-scrollbar {
+    display: none;
+}
+.text-img-right{
+    width: 60%;
+    padding-top: 50px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+}
+.text-img-right img{
+    width: 50%;
+}
+.box4{
+    display: none;
+    position: relative;
+}
+.act-yellow{
+    text-decoration: underline;
+}
+.act-yellow:hover{
+    color: #FDE776;
+    cursor: pointer;
+}
+.box5{
+    display: none;
+}
+.box5 >img{
+    width: 300px;
+}
+.box5 >div{
+    display: flex;
+    flex-wrap: wrap;
+}
+.box5 >div >img{
+    width: 100%;
+}
+.box5 >div>div{
+    display: flex;
+}
+.box5 >div>div >img{
+    width: 33.33%;
+}
+.box4 >img{
+    width: 350px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.con img{
+    display: block;
+    width: 100%;
+}
+._l{
+    display: flex;
+    background:url('../images/3/02.JPG') no-repeat left center;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+
+._l ._ll{
+    width: 400px;
+    color: #fff;
+    font-size: 30px;
+    position: absolute;
+    right: 50px;
+    top:60px;
+    text-align: center;
+}
+._r{
+    text-align: center;
+    width: 620px;
+    color: #fff;
+    font-size: 30px;
+    padding-left: 50px;
+    padding-bottom: 100px;
+    position: absolute;
+    top: -220px;
+    left: 0px;
+    z-index: 1;
+}
