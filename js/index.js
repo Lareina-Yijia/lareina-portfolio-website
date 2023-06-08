@@ -34,10 +34,38 @@ _box_4.addEventListener("wheel", function (e) {
         $('.box5').css('display', 'block')
     }
 });
+let _box_5 = document.querySelector("#box_5");
+
+_box_5.addEventListener("wheel", function (e) {
+    //禁止事件默认行为（此处禁止鼠标滚轮行为关联到"屏幕滚动条上下移动"行为）  
+    if (e.deltaY > 10) {
+        $('.box6').css('display', 'block')
+    }
+});
+let _box_6 = document.querySelector("#box_6");
+
+_box_6.addEventListener("wheel", function (e) {
+    //禁止事件默认行为（此处禁止鼠标滚轮行为关联到"屏幕滚动条上下移动"行为）  
+    if (e.deltaY > 10) {
+        $('.box7').css('display', 'block')
+    }
+});
+let _box_7 = document.querySelector("#box_7");
+
+_box_7.addEventListener("wheel", function (e) {
+    //禁止事件默认行为（此处禁止鼠标滚轮行为关联到"屏幕滚动条上下移动"行为）  
+    if (e.deltaY > 10) {
+        $('.box8').css('display', 'block')
+    }
+});
+
+
+
 $('#back').click(function () {
     $('.box').animate({
         scrollLeft: 0,
     }, 1000);
+    $('#box_front').css('display', 'block')
 })
 
 $('#backTop').click(function () {
@@ -60,6 +88,21 @@ $('#backTop3').click(function () {
         $("html,body").stop().animate({ scrollTop: 0 }, 600);
     }
 })
+$('#backTop4').click(function () {
+    if ($(window).scrollTop() > 0) {
+        $("html,body").stop().animate({ scrollTop: 0 }, 600);
+    }
+})
+$('#backTop5').click(function () {
+    if ($(window).scrollTop() > 0) {
+        $("html,body").stop().animate({ scrollTop: 0 }, 600);
+    }
+})
+$('#backTop6').click(function () {
+    if ($(window).scrollTop() > 0) {
+        $("html,body").stop().animate({ scrollTop: 0 }, 600);
+    }
+})
 $(function () {
     $(window).scroll(function () {
         if ($(this).scrollTop() == 0) {
@@ -67,13 +110,16 @@ $(function () {
             $('.box3').css('display', 'none')
             $('.box4').css('display', 'none')
             $('.box5').css('display', 'none')
+            $('.box6').css('display', 'none')
+            $('.box7').css('display', 'none')
+            $('.box8').css('display', 'none')
         }
-        if ($(this).scrollTop() > 650) {
+        if ($(this).scrollTop() > 900) {
             $('.big-fiexd').css('position', 'fixed')
         } else {
             $('.big-fiexd').css('position', 'relative')
         }
-        if ($(this).scrollTop() > 1300) {
+        if ($(this).scrollTop() > 1700) {
             $('.big-fiexd2').css('display', 'none')
             $('.text-left').css('display', 'block')
 
@@ -84,3 +130,10 @@ $(function () {
     });
 
 })
+$('.aboutMe').hover(function () {
+    $('.aboutMe').html('About me')
+}
+    , function () {
+        $('.aboutMe').html('back to the far left')
+    }
+)
